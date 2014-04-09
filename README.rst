@@ -5,8 +5,7 @@ sales_menu
 .. image:: https://badge.fury.io/py/sales_menu.png
     :target: https://badge.fury.io/py/sales_menu
 
-.. image:: https://travis-ci.org/jsmitka/sales_menu.png?branch=master
-    :target: https://travis-ci.org/jsmitka/sales_menu
+.. image:: https://www.codeship.io/projects/76891d70-a235-0131-4494-3a3b2fba6173/status
 
 .. image:: https://coveralls.io/repos/jsmitka/sales_menu/badge.png?branch=master
     :target: https://coveralls.io/r/jsmitka/sales_menu?branch=master
