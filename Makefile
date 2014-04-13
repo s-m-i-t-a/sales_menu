@@ -27,13 +27,14 @@ lint:
 	flake8 sales_menu tests
 
 test:
-	python runtests.py test
+	# python runtests.py test
+	py.test
 
 test-all:
 	tox
 
 coverage:
-	coverage run --source sales_menu setup.py test
+	coverage run --source sales_menu runtests.py
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
