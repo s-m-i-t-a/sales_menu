@@ -3,7 +3,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 
-from menu.models import Menu
+from sales_menu.models import Menu
 
 
 class MenuAdmin(admin.ModelAdmin):

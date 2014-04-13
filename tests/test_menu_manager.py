@@ -6,7 +6,7 @@ import pytest
 
 from factories import MenuFactory
 
-from menu.models import Menu
+from sales_menu.models import Menu
 
 
 class TestMenuManager(object):

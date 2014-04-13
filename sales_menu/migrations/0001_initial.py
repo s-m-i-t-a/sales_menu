@@ -9,10 +9,10 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'Menu'
-        db.create_table(u'menu_menu', (
+        db.create_table(u'sales_menu_menu', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('text', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('parent', self.gf('django.db.models.fields.related.ForeignKey')(default=None, to=orm['menu.Menu'], null=True, blank=True)),
+            ('parent', self.gf('django.db.models.fields.related.ForeignKey')(default=None, to=orm['sales_menu.Menu'], null=True, blank=True)),
             ('url', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('weight', self.gf('django.db.models.fields.PositiveIntegerField')(default=1)),
         ))
@@ -21,14 +21,14 @@ class Migration(SchemaMigration):
 
     def backwards(self, orm):
         # Deleting model 'Menu'
-        db.delete_table(u'menu_menu')
+        db.delete_table(u'sales_menu_menu')
 
 
     models = {
-        u'menu.menu': {
+        u'sales_menu.menu': {
             'Meta': {'object_name': 'Menu'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'parent': ('django.db.models.fields.related.ForeignKey', [], {'default': 'None', 'to': u"orm['menu.Menu']", 'null': 'True', 'blank': 'True'}),
+            'parent': ('django.db.models.fields.related.ForeignKey', [], {'default': 'None', 'to': u"orm['sales_menu.Menu']", 'null': 'True', 'blank': 'True'}),
             'text': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'url': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'weight': ('django.db.models.fields.PositiveIntegerField', [], {'default': '1'})

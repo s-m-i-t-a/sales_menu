@@ -10,18 +10,18 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
 
         # Changing field 'Menu.url'
-        db.alter_column(u'menu_menu', 'url', self.gf('django.db.models.fields.URLField')(max_length=255))
+        db.alter_column(u'sales_menu_menu', 'url', self.gf('django.db.models.fields.URLField')(max_length=255))
 
     def backwards(self, orm):
 
         # Changing field 'Menu.url'
-        db.alter_column(u'menu_menu', 'url', self.gf('django.db.models.fields.CharField')(max_length=255))
+        db.alter_column(u'sales_menu_menu', 'url', self.gf('django.db.models.fields.CharField')(max_length=255))
 
     models = {
-        u'menu.menu': {
+        u'sales_menu.menu': {
             'Meta': {'object_name': 'Menu'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'parent': ('django.db.models.fields.related.ForeignKey', [], {'default': 'None', 'to': u"orm['menu.Menu']", 'null': 'True', 'blank': 'True'}),
+            'parent': ('django.db.models.fields.related.ForeignKey', [], {'default': 'None', 'to': u"orm['sales_menu.Menu']", 'null': 'True', 'blank': 'True'}),
             'text': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'url': ('django.db.models.fields.URLField', [], {'max_length': '255'}),
             'weight': ('django.db.models.fields.PositiveIntegerField', [], {'default': '1'})

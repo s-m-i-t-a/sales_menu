@@ -7,8 +7,8 @@ import pytest
 from django.template import Context, Template
 from django.test.client import RequestFactory
 
-from menu.templatetags.menu_tags import MenuNode
-from menu.models import Menu
+from sales_menu.templatetags.menu_tags import MenuNode
+from sales_menu.models import Menu
 
 from factories import MenuFactory
 

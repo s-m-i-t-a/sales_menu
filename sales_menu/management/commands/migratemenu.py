@@ -6,7 +6,7 @@ from django.contrib.flatpages.models import FlatPage
 from django.db import connection
 from django.utils.translation import ugettext as _
 
-from menu.models import Menu
+from sales_menu.models import Menu
 
 
 OLD_MENU_SQL = '''SELECT * FROM old_menu_menu ORDER BY url'''

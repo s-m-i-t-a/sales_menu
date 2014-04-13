@@ -2,7 +2,7 @@
 
 import factory
 
-from menu.models import Menu
+from sales_menu.models import Menu
 
 
 class MenuFactory(factory.DjangoModelFactory):
