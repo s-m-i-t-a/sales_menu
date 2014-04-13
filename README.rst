@@ -12,10 +12,12 @@ sales_menu
 
 The simple menu for Django.
 
-Documentation
--------------
+..
+    Documentation
+    -------------
 
-The full documentation is at https://sales_menu.readthedocs.org.
+..
+    The full documentation is at https://sales_menu.readthedocs.org.
 
 Quickstart
 ----------
@@ -24,9 +26,31 @@ Install sales_menu::
 
     pip install sales_menu
 
-Then use it in a project::
+Add ``sales_menu`` to your ``INSTALLED_APPS`` list in your settings.
 
-    import sales_menu
+``sales_menu`` requires that the ``request`` object be available in
+the context when you call the ``{% menu %}`` template tag. This
+means that you need to ensure that your ``TEMPLATE_CONTEXT_PROCESSORS``
+setting includes ``django.core.context_processors.request``, which it
+doesn't by default.
+
+And use in template::
+
+    {% menu_tags %}
+    {% menu %}
+
+    {% for item in menu %}
+
+        <p>{{ item.text }}
+        {% if menu_item in selected_menu_path %}
+        &mdash; selected
+        {% endif %}
+        </p>
+
+        {% for child in item.children %}
+            <p>— {{ child.text }}</p>
+        {% endfor %}
+    {% endfor %}
 
 Features
 --------
