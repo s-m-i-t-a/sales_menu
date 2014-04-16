@@ -30,7 +30,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Jindřich Smitka',
     author_email='smitka.j@gmail.com',
-    url='https://bitbucket.org/jsmitka/sales_menu',
+    url='https://github.com/s-m-i-t-a/sales_menu',
     packages=[
         'sales_menu',
     ],

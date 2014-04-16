@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://bitbucket.org/jsmitka/sales_menu/issues.
+Report bugs at https://github.com/s-m-i-t-a/sales_menu/issues.
 
 If you are reporting a bug, please include:
 
@@ -24,13 +24,13 @@ If you are reporting a bug, please include:
 Fix Bugs
 ~~~~~~~~
 
-Look through the Bitbucket issues for bugs. Anything tagged with "bug"
+Look through the GitHub issues for bugs. Anything tagged with "bug"
 is open to whoever wants to implement it.
 
 Implement Features
 ~~~~~~~~~~~~~~~~~~
 
-Look through the Bitbucket issues for features. Anything tagged with "feature"
+Look through the GitHub issues for features. Anything tagged with "feature"
 is open to whoever wants to implement it.
 
 Write Documentation
@@ -43,7 +43,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://bitbucket.org/jsmitka/sales_menu/issues.
+The best way to send feedback is to file an issue at https://github.com/s-m-i-t-a/sales_menu/issues.
 
 If you are proposing a feature:
 
@@ -57,7 +57,7 @@ Get Started!
 
 Ready to contribute? Here's how to set up `sales_menu` for local development.
 
-1. Fork the `sales_menu` repo on Bitbucket.
+1. Fork the `sales_menu` repo on GitHub.
 2. Clone your fork locally::
 
     $ git clone git@bitbucket.org:your_name_here/sales_menu.git
@@ -83,13 +83,13 @@ tests, including testing other Python versions with tox::
 
 To get flake8 and tox, just pip install them into your virtualenv.
 
-6. Commit your changes and push your branch to Bitbucket::
+6. Commit your changes and push your branch to GitHub::
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the Bitbucket website.
+7. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
