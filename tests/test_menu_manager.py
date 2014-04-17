@@ -4,7 +4,7 @@ import random
 
 import pytest
 
-from factories import MenuFactory
+from .factories import MenuFactory
 
 from sales_menu.models import Menu
 

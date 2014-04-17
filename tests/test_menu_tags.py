@@ -10,7 +10,7 @@ from django.test.client import RequestFactory
 from sales_menu.templatetags.menu_tags import MenuNode
 from sales_menu.models import Menu
 
-from factories import MenuFactory
+from .factories import MenuFactory
 
 
 class TestMenuNode(object):

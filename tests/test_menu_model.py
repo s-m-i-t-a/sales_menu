@@ -6,7 +6,7 @@ import pytest
 
 from sales_menu.models import Menu
 
-from factories import MenuFactory
+from .factories import MenuFactory
 
 
 class TestMenu(object):
