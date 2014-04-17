@@ -8,8 +8,8 @@ sales_menu
 .. image:: https://travis-ci.org/s-m-i-t-a/sales_menu.png?branch=master
     :target: https://travis-ci.org/s-m-i-t-a/sales_menu
 
-.. image:: https://coveralls.io/repos/jsmitka/sales_menu/badge.png?branch=master
-    :target: https://coveralls.io/r/jsmitka/sales_menu?branch=master
+.. image:: https://coveralls.io/repos/s-m-i-t-a/sales_menu/badge.png?branch=master
+    :target: https://coveralls.io/r/s-m-i-t-a/sales_menu?branch=master
 
 The simple menu for Django.
 
