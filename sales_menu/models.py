@@ -24,7 +24,7 @@ class Menu(models.Model):
     MAX_LEVEL = LEVELS - 1
 
     text = models.CharField(verbose_name=_(u'Text'), max_length=255)
-    parent = models.ForeignKey('self', verbose_name=_(u'Rodič'), default=None, blank=True, null=True)
+    parent = models.ForeignKey('self', verbose_name=_(u'Parent'), default=None, blank=True, null=True)
     url = models.CharField(verbose_name=_(u"Link"), max_length=255)
     weight = models.PositiveIntegerField(verbose_name=_(u"Order"), default=1)
     real_weight = models.PositiveIntegerField(default=0, editable=False)
