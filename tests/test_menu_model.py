@@ -113,3 +113,18 @@ class TestMenu(object):
         with pytest.raises(ValidationError):
             menu2 = MenuFactory.build(weight=1)
             menu2.full_clean()
+
+    @pytest.mark.django_db
+    def test_menu_item_does_not_exist_for_given_url(self):
+        path = Menu.selected_path(url='/foo/')
+
+        assert path == []
+
+    @pytest.mark.django_db
+    def test_select_path_not_contain_menu_items_with_same_url(self):
+        MenuFactory(weight=1, url='/foo/')
+        MenuFactory(weight=2, url='/foo/')
+
+        path = Menu.selected_path(url='/foo/')
+
+        assert path == []
