@@ -15,8 +15,9 @@ class Migration(SchemaMigration):
             ('parent', self.gf('django.db.models.fields.related.ForeignKey')(default=None, to=orm['sales_menu.Menu'], null=True, blank=True)),
             ('url', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('weight', self.gf('django.db.models.fields.PositiveIntegerField')(default=1)),
+            ('real_weight', self.gf('django.db.models.fields.PositiveIntegerField')(default=0)),
         ))
-        db.send_create_signal(u'menu', ['Menu'])
+        db.send_create_signal(u'sales_menu', ['Menu'])
 
 
     def backwards(self, orm):
@@ -29,10 +30,11 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Menu'},
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'parent': ('django.db.models.fields.related.ForeignKey', [], {'default': 'None', 'to': u"orm['sales_menu.Menu']", 'null': 'True', 'blank': 'True'}),
+            'real_weight': ('django.db.models.fields.PositiveIntegerField', [], {'default': '0'}),
             'text': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'url': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             'weight': ('django.db.models.fields.PositiveIntegerField', [], {'default': '1'})
         }
     }
 
-    complete_apps = ['menu']
+    complete_apps = ['sales_menu']
