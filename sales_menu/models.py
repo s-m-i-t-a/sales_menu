@@ -2,6 +2,7 @@
 
 from collections import deque
 
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.db.models.signals import post_save
@@ -38,6 +39,11 @@ class Menu(models.Model):
     def children(self):
         return Menu.objects.filter(parent=self)
 
+    def clean(self):
+        super(Menu, self).clean()
+
+        self.validate_unique_weight_in_same_level()
+
     def get_real_weight(self):
         '''
         The real weight is calculated as the sum of the weights of parents shifted by BITS_PER_LEVEL bits.
@@ -61,7 +67,16 @@ class Menu(models.Model):
     def save(self, *args, **kwargs):
         self.real_weight = self.get_real_weight()
 
+        # TODO: call full_clean or not?
+
         return super(Menu, self).save(*args, **kwargs)
+
+    def validate_unique_weight_in_same_level(self):
+        '''
+        Check unique combination parent and weight.
+        '''
+        if Menu.objects.filter(parent=self.parent).filter(weight=self.weight).exists():
+            raise ValidationError('The combination of parent and weight must be unique.')
 
     @classmethod
     def selected_path(cls, url):

@@ -11,4 +11,4 @@ class MenuFactory(factory.DjangoModelFactory):
     text = factory.Sequence(lambda n: u'Menu %d' % n)
     parent = None
     url = factory.Sequence(lambda n: u'/menu-%d' % n)
-    weight = 1
+    weight = factory.Sequence(lambda n: n)

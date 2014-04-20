@@ -4,6 +4,8 @@ import random
 
 import pytest
 
+from django.core.exceptions import ValidationError
+
 from sales_menu.models import Menu
 
 from .factories import MenuFactory
@@ -103,3 +105,11 @@ class TestMenu(object):
         m = Menu.objects.get(url=menu1.url)
 
         assert m.real_weight > old_real_weight
+
+    @pytest.mark.django_db
+    def test_unique_weight_on_same_level(self):
+        MenuFactory(weight=1)
+
+        with pytest.raises(ValidationError):
+            menu2 = MenuFactory.build(weight=1)
+            menu2.full_clean()
