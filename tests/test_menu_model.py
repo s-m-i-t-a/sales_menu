@@ -96,15 +96,19 @@ class TestMenu(object):
         menu = MenuFactory(weight=1)
 
         menu1 = MenuFactory(parent=menu, weight=1)
+        menu2 = MenuFactory(parent=menu1, weight=1)
 
-        old_real_weight = menu1.real_weight
+        old_real_weight1 = menu1.real_weight
+        old_real_weight2 = menu2.real_weight
 
         menu.weight = 2
         menu.save()
 
         m = Menu.objects.get(url=menu1.url)
+        m2 = Menu.objects.get(url=menu1.url)
 
-        assert m.real_weight > old_real_weight
+        assert m.real_weight > old_real_weight1
+        assert m2.real_weight > old_real_weight2
 
     @pytest.mark.django_db
     def test_unique_weight_on_same_level(self):
