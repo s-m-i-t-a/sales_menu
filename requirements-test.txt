@@ -14,4 +14,3 @@ tox>=1.7.0
 
 # Additional test requirements go here
 ipython<2.0.0
-South==0.8.4
