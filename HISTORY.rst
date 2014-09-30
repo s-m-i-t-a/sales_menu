@@ -14,3 +14,8 @@ History
 * Fixed outdated requirements
 * Added requires.io badge
 * Run test on Django 1.7
+
+0.1.1 (2014-09-30)
+++++++++++++++++++
+
+* Fixed run on Django 1.4
