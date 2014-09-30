@@ -15,7 +15,7 @@ class MenuManager(models.Manager):
 
     # for Django < 1.6
     def get_query_set(self):
-        return self.get_queryset()
+        return super(MenuManager, self).get_query_set().order_by('real_weight')
 
 
 class RootMenuManager(MenuManager):
@@ -24,7 +24,7 @@ class RootMenuManager(MenuManager):
 
     # for Django < 1.6
     def get_query_set(self):
-        return self.get_queryset()
+        return super(RootMenuManager, self).get_query_set().filter(parent=None)
 
 
 class Menu(models.Model):
