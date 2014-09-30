@@ -13,14 +13,13 @@ python:
   - "2.7"
   - "2.6"
 
-
 matrix:
   exclude:
-    - python: 3.4
+    - python: "3.4"
       env: DJANGO_VERSION=1.4.15
-    - python: 3.3
+    - python: "3.3"
       env: DJANGO_VERSION=1.4.15
-    - python: 2.6
+    - python: "2.6"
       env: DJANGO_VERSION=1.7
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
