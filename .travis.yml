@@ -2,13 +2,21 @@
 
 language: python
 
+env:
+  - DJANGO_VERSION=1.7
+  - DJANGO_VERSION=1.6.7
+  - DJANGO_VERSION=1.4.15
+
 python:
+  - "3.4"
   - "3.3"
   - "2.7"
   - "2.6"
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements-test.txt
+install:
+  - pip install -q Django==$DJANGO_VERSION
+  - pip install -r requirements-test.txt
 
 # command to run tests using coverage, e.g. python setup.py test
 script: coverage run --source sales_menu runtests.py
