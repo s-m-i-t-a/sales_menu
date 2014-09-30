@@ -11,6 +11,10 @@ sales_menu
 .. image:: https://coveralls.io/repos/s-m-i-t-a/sales_menu/badge.png?branch=master
     :target: https://coveralls.io/r/s-m-i-t-a/sales_menu?branch=master
 
+.. image:: https://requires.io/github/s-m-i-t-a/sales_menu/requirements.svg?branch=master
+    :target: https://requires.io/github/s-m-i-t-a/sales_menu/requirements/?branch=master
+    :alt: Requirements Status
+
 The simple menu for Django.
 
 ..
